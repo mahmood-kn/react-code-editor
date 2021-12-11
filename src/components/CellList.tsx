@@ -2,6 +2,7 @@ import React from 'react';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import CellListItem from './CellListItem';
 import AddCell from './AddCell';
+import './CellList.css';
 
 interface Props {}
 
@@ -16,7 +17,7 @@ const CellList = (props: Props) => {
     </React.Fragment>
   ));
   return (
-    <div>
+    <div className='cell-list'>
       <AddCell forceVisible={cells.length === 0} previousCellId={null} />
       {renderedCells}
     </div>
